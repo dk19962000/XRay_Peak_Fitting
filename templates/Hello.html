@@ -1,0 +1,74 @@
+<html>
+  <head>
+    <style>
+      img {
+        display: block;
+        margin: auto;
+      }
+      form{
+        margin: auto;
+        align-content: center;
+      }
+      a.button {
+      background-color: #4CAF50; /* Green */
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      }
+      .outerDiv
+      {
+        color: #fff;
+        height: 400px;
+        width: 1024px;
+        margin: 0px auto;
+        padding: 5px;
+      }
+      .leftDiv
+      {
+        background-color: #efefef;
+        color: #000;
+        height: 450px;
+        width: 80%;
+        float: left;
+      }
+      .rightDiv
+      {
+        background-color: #efefef;
+        color: #000;
+        height: 400px;
+        width: 20%;
+        float: right;
+      }
+    </style>
+  </head>
+  <body>
+  
+   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+      <div>
+      <a href="/" class="button">Home</a>
+      <h1 align="center" style="color: red">Rough Plot for the data</h1>
+    </div>
+    <div class="outerDiv">
+    <div class="leftDiv" id="bargraph">
+        <script>
+            var graphs = {{plot | safe}};
+            Plotly.plot('bargraph',graphs,{});
+        </script>
+    </div>
+    <div class="rightDiv">
+      <h4 align="center">Enter 2θ range for curve fitting<h4>
+      <form method="POST" action="/response" class="form">
+       Start: <input type="number" name="fname" required><br>
+       End: <input type="number" name="note" required><br>
+
+       <input type="submit" value="Submit">
+       </form> 
+     </div>
+  </div>
+  </body>
+  </html>

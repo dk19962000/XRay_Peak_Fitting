@@ -1,0 +1,34 @@
+<html>
+  <head>
+
+    <title>X-RAY</title>
+    <style type="text/css">
+      div.ex1 {
+        border-style: dotted;
+        width: auto;
+        height: 100px;
+        margin-left: 530px;
+        margin-right: 500px;
+        padding-top: 30px;
+        }
+        div.ex2 {
+        }
+    </style>
+  </head>
+  <body>
+
+  <h1 align="center" style="color:red;" style="font-size:50px;">Welcome to X-Ray Fitting curve</h1>
+  <h1 align="center" style="color:red;" style="font-size:50px;">Only csv files supported with intensity labelled as y and 2θ as x</h1>
+  <h1 align="center" style="color:red;" style="font-size:50px;">Please extract the data into csv and label column as x and y</h1>
+  <form action = "/uploader" method = "POST" enctype = "multipart/form-data">
+         <div align="center" class="ex1">
+            <input type="file" name="file" accept=".csv"/ style="font-weight: bold">  
+         </div><br><br>
+         <div align="center" class="ex2">
+            <input type = "submit" value="Upload">  
+         </div>
+  </form>
+
+  
+  </body>
+  </html>
